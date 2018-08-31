@@ -25,7 +25,11 @@
         <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'vendors'}" (click)="navigateTo('/vendors')">
           <div class="icon-nav icon-user-list"></div>
           <div class="nav-title">Vendors</div>
-        </div>        
+        </div>
+        <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'valuation'}" (click)="navigateTo('/valuation')">
+          <div class="icon-nav icon-user-list"></div>
+          <div class="nav-title">Valuation</div>
+        </div>
       </div>
       <div class="right-container">
         <router-outlet></router-outlet>

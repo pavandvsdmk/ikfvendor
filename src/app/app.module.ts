@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { AddVendorComponent } from './add-vendor/add-vendor.component';
+import { ValuationFormComponent } from './valuation-form/valuation-form.component';
 
 // Services
 import { AppService } from './app.service';
@@ -37,6 +38,12 @@ const appRoutes: Routes = [
     data: {
       name: 'vendors'
     }
+  }, {
+    path: 'valuation',
+    component: ValuationFormComponent,
+    data: {
+      name: 'valuation'
+    }
   }
 ];
 
@@ -45,7 +52,8 @@ const appRoutes: Routes = [
     AppComponent,
     VendorListComponent,
     AddVendorComponent,
-    OnlyNumberDirective
+    OnlyNumberDirective,
+    ValuationFormComponent
   ],
   imports: [
     BrowserAnimationsModule,

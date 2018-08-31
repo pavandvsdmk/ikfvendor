@@ -1,0 +1,108 @@
+<div class="view-container valuation-container">
+  <div class="sub-title-wrap flx-row flx-jsb">
+    <div class="sub-title">Valuation</div>
+  </div>
+  <div class="valuation-form-container">
+    <form #valuationForm="ngForm" [ngClass]="{'form-submitted' : formSubmitted}">
+      <ngb-tabset>
+        <ngb-tab id="general">
+          <ng-template ngbTabTitle>
+            <div>General</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row tab-container">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="required">Valuation request received from</label>
+                  <input type="text" [(ngModel)]="valuation.requestor" name="requestor" class="form-control" readonly required>
+                </div>
+                <div class="form-group">
+                  <label class="required">Name of Loan Purchaser</label>
+                  <input type="text" [(ngModel)]="valuation.purchaser" name="purchaser" class="form-control" readonly required>
+                </div>
+                <div class="form-group">
+                  <label class="required">Date of inspection</label>
+                  <my-date-picker [options]="myDatePickerOptions" name="inspection-date" [(ngModel)]="valuation.inspectionDate" required></my-date-picker>
+                </div>
+                <div class="form-group">
+                  <label class="required">Inspection Address</label>
+                  <textarea class="form-control" name="inspection-address" [(ngModel)]="valuation.inspectionAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="required">Serial no.of owner as per RC</label>
+                  <input type="text" [(ngModel)]="valuation.serialNo" name="serial-no" class="form-control" OnlyNumber="true" required>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="vehicle">
+          <ng-template ngbTabTitle>
+            <div>Vehicle's Particulars</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row tab-container">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Name of registered owner</label>
+                  <input type="text" [(ngModel)]="valuation.registerOwner" name="register-owner" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label>Registration no</label>
+                  <input type="text" [(ngModel)]="valuation.registrationNo" name="registration-no" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label>Date of registration</label>
+                  <my-date-picker [options]="myDatePickerOptions" name="registration-date" [(ngModel)]="valuation.registrationDate"></my-date-picker>
+                </div>
+                <div class="form-group">
+                  <label>Chassis No</label>
+                  <input type="text" [(ngModel)]="valuation.chassisNo" name="chassis-no" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Engine No</label>
+                  <input type="text" [(ngModel)]="valuation.engineNo" name="engine-no" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Model</label>
+                  <input type="text" [(ngModel)]="valuation.model" name="model" class="form-control" readonly>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Make</label>
+                    <input type="text" [(ngModel)]="valuation.make" name="make" class="form-control" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label>Manufacturing year</label>
+                    <input type="text" [(ngModel)]="valuation.manufactureYear" name="manufacture-year" class="form-control" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label>G.V.W. (KGs)</label>
+                    <input type="text" [(ngModel)]="valuation.gvk" name="gvk" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>H.P.N.</label>
+                    <input type="text" [(ngModel)]="valuation.hpn" name="hpn" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Original RC verified</label>
+                    <div>
+                      <div class="btn-group btn-group-toggle" ngbRadioGroup name="status" [(ngModel)]="valuation.rcVerified">
+                        <label ngbButtonLabel class="btn-secondary">
+                          <input ngbButton type="radio" [value]="true"> Active
+                        </label>
+                        <label ngbButtonLabel class="btn-secondary">
+                          <input ngbButton type="radio" [value]="false"> Inactive
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </form>
+  </div>
+</div>
