@@ -19,8 +19,8 @@ export class VendorModel {
     pincode: String;
     licenseNo: String;
     licenseExpDate: any = getCurrentDate();
-    role: String;
-    statue: Boolean = true;
+    role: String = 'VALUATOR';
+    status: Boolean = true;
 }
 
 export class NameModel {

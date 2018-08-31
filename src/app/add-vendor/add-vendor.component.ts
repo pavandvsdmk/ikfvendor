@@ -19,12 +19,22 @@ export class AddVendorComponent implements OnInit {
     name: 'Mumbai',
     value: 'Mumbai'
   }];
+  formSubmitted: boolean;
 
   constructor() { }
 
   ngOnInit() {
     const vm = this;
+    vm.clearField();
+  }
+
+  clearField() {
+    const vm = this;
     vm.vendor = new VendorModel();
   }
 
+  onSave(flag) {
+    const vm = this;
+    console.log(vm.vendor);
+  }
 }
