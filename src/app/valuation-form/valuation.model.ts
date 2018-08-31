@@ -9,6 +9,9 @@ export class ValuationModel {
     general: GeneralModel = new GeneralModel();
     vehicle: VehicleModel = new VehicleModel();
     insurance: InsuranceModel = new InsuranceModel();
+    permit: PermitModel = new PermitModel();
+    condition: ConditionModel = new ConditionModel();
+    value: ValueModel = new ValueModel();
 }
 
 export class GeneralModel {

@@ -167,6 +167,210 @@
             </div>
           </ng-template>
         </ngb-tab>
+
+        <ngb-tab id="permit">
+          <ng-template ngbTabTitle>
+            <div>Permit/Fitness</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row tab-container">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Fitness valid upto</label>
+                  <my-date-picker [options]="myDatePickerOptions" name="fitness-upto" [(ngModel)]="valuation.permit.fitnessUpto"></my-date-picker>
+                </div>
+                <div class="form-group">
+                  <label>Permit no</label>
+                  <input type="text" [(ngModel)]="valuation.permit.permitNo" name="permit-no" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Permit valid upto</label>
+                  <my-date-picker [options]="myDatePickerOptions" name="permit-upto" [(ngModel)]="valuation.permit.permitUpto"></my-date-picker>
+                </div>
+                <div class="form-group">
+                  <label>Road tax paid upto</label>
+                  <my-date-picker [options]="myDatePickerOptions" name="road-tax-upto" [(ngModel)]="valuation.permit.roadTaxUpto"></my-date-picker>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab id="condition">
+          <ng-template ngbTabTitle>
+            <div>Condition</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row tab-container">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Body shell</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="body-shell" [(ngModel)]="valuation.condition.bodyShell">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Suspension</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="suspension" [(ngModel)]="valuation.condition.suspension">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Battery</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="battery" [(ngModel)]="valuation.condition.battery">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Rear Tyres</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="rearTyre" [(ngModel)]="valuation.condition.rearTyre">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Front Tyres</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="frontTyre" [(ngModel)]="valuation.condition.frontTyre">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>electric/transmission/exhaust/brake/ steering system/Cooling</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="electric" [(ngModel)]="valuation.condition.electric">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="good"> Good
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="avg"> Avg
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" value="bad"> Bad
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Remarks</label>
+                  <textarea class="form-control" name="remarks" [(ngModel)]="valuation.condition.remarks"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Trial drive comment on engine condition</label>
+                  <textarea class="form-control" name="trial-comment" [(ngModel)]="valuation.condition.trialComment"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Meter Reading</label>
+                  <input type="text" [(ngModel)]="valuation.condition.meterReading" name="meter-reading" class="form-control" OnlyNumber="true">
+                </div>
+                <div class="form-group">
+                  <label>Vehicle in running condition? (moved and tested)</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="running-condition" [(ngModel)]="valuation.condition.runningCondition">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" [value]="true"> Yes
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" [value]="false"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab id="valuation">
+          <ng-template ngbTabTitle>
+            <div>Valuation</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row tab-container">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Cost of new vehicle</label>
+                  <input type="text" [(ngModel)]="valuation.value.newVehicleCost" name="new-vehicle-value" class="form-control" OnlyNumber="true">
+                </div>
+                <div class="form-group">
+                  <label>Value of similar asset accessed in last 2M</label>
+                  <input type="text" [(ngModel)]="valuation.value.similarAssetValue" name="similar-asset-value" class="form-control" OnlyNumber="true">
+                </div>
+                <div class="form-group">
+                  <label>Valuation Amount</label>
+                  <input type="text" [(ngModel)]="valuation.value.valuationAmount" name="valuation-amount" class="form-control" OnlyNumber="true">
+                </div>
+                <div class="form-group">
+                  <label>Remarks/Additional information on asset</label>
+                  <textarea class="form-control" name="remarks-asset" [(ngModel)]="valuation.value.remarks"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Chassis print/copy attached</label>
+                  <div>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="chassis-copy" [(ngModel)]="valuation.value.chassisCopy">
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" [value]="true"> Yes
+                      </label>
+                      <label ngbButtonLabel class="btn-secondary">
+                        <input ngbButton type="radio" [value]="false"> No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
       </ngb-tabset>
     </form>
   </div>
