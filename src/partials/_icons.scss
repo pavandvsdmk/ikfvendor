@@ -1,0 +1,48 @@
+.icon-nav {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.icon-lg {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-action {
+    width: 25px;
+    height: 25px;
+    padding: 0 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;    
+}
+
+.icon-user-list {
+    background: url('assets/icons/user-list.svg') no-repeat;
+    background-size: contain;
+}
+
+.icon-form {
+    background: url('assets/icons/forms.svg') no-repeat center center / 30px;
+}
+
+.icon-doc {
+    background: url('assets/icons/doc.svg') no-repeat center center / 30px;
+}
+
+.icon-delete {
+    background: url('assets/icons/delete.svg') no-repeat center center / contain;
+}
+
+.icon-add {
+    background: url('assets/icons/add.svg') no-repeat center center / contain;
+}
+
+.icon-remove {
+    background: url('assets/icons/remove.svg') no-repeat center center / contain;
+}
+
+.icon-logout {
+    background: url('assets/icons/logout.svg') no-repeat center center / contain;
+}
