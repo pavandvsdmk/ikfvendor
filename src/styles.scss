@@ -7,8 +7,13 @@
 @import './partials/_icons.scss';
 @import './partials/_layout.scss';
 @import './partials/_form.scss';
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
+    padding: 4px 5px;
 }

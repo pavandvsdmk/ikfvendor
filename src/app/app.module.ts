@@ -4,15 +4,24 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Components
 import { AppComponent } from './app.component';
-
-import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { AddVendorComponent } from './add-vendor/add-vendor.component';
-// import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
 // Services
 import { AppService } from './app.service';
+import { DateService } from './services/date.service';
+
+// Directives
+import { OnlyNumberDirective } from './directives/onlyNumbers.directive';
+
+// Plugins
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MyDatePickerModule } from 'mydatepicker';
+import { NgSelectModule } from '@ng-select/ng-select';
+// import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/new-vendor', pathMatch: 'full' },
@@ -35,18 +44,23 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     VendorListComponent,
-    AddVendorComponent
+    AddVendorComponent,
+    OnlyNumberDirective
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     Ng2SmartTableModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgbModule.forRoot(),
+    MyDatePickerModule,
+    NgSelectModule
     // ToastModule.forRoot()
   ],
   providers: [
-    AppService
+    AppService,
+    DateService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,96 @@
-<p>
-  add-vendor works!
-</p>
+<div class="view-container vendorview-container">
+  <div class="sub-title-wrap flx-row flx-jsb">
+    <div class="sub-title">Vendor</div>
+  </div>
+  <div class="vendor-form-container">
+    <form #vendorForm="ngForm" [ngClass]="{'form-submitted' : formSubmitted}">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="required">Firm Name</label>
+            <input type="text" [(ngModel)]="vendor.firm" name="firm" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="required">Propreitor Name</label>
+            <div class="input-group">
+              <input placeholder="First" type="text" [(ngModel)]="vendor.propreitor.fname" name="pfname" class="form-control" required>
+              <input placeholder="Middle" type="text" [(ngModel)]="vendor.propreitor.mname" name="pmname" class="form-control" required>
+              <input placeholder="Last" type="text" [(ngModel)]="vendor.propreitor.lname" name="plname" class="form-control" required>
+            </div>            
+          </div>
+          <div class="form-group">
+            <label class="required">Mobile No</label>
+            <input type="text" [(ngModel)]="vendor.mobile" name="mobile" class="form-control" OnlyNumber="true" required pattern="^[0-9]{10}$">
+          </div>
+          <div class="form-group">
+            <label>Phone No</label>
+            <input type="text" [(ngModel)]="vendor.phone" name="phone" class="form-control" OnlyNumber="true">
+          </div>
+          <div class="form-group">
+            <label class="required">Email id</label>
+            <input type="text" [(ngModel)]="vendor.email" name="email" class="form-control" required pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
+          </div>
+          <div class="form-group">
+            <label class="required">Address</label>
+            <textarea class="form-control" name="address" [(ngModel)]="vendor.address" required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="required">City</label>
+            <input type="text" [(ngModel)]="vendor.city" name="city" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="required">State</label>
+            <input type="text" [(ngModel)]="vendor.state" name="state" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="required">Pincode</label>
+            <input type="text" [(ngModel)]="vendor.pincode" name="pincode" class="form-control" required OnlyNumber="true" pattern="^[0-9]{6}$">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>License No</label>
+            <input type="text" [(ngModel)]="vendor.licenseNo" name="licenseNo" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>License Expiry Date</label>
+            <my-date-picker name="ft_dop" [options]="myDatePickerOptions" [(ngModel)]="vendor.licenseExpDate"></my-date-picker>
+          </div>          
+          <div class="form-group">
+            <label class="required">Role</label>
+            <div>
+              <div class="btn-group btn-group-toggle" ngbRadioGroup name="role" [(ngModel)]="vendor.role" required>
+                <label ngbButtonLabel class="btn-secondary">
+                  <input ngbButton type="radio" value="FI"> FI Agent
+                </label>
+                <label ngbButtonLabel class="btn-secondary">
+                  <input ngbButton type="radio" value="RCU"> RCU
+                </label>
+                <label ngbButtonLabel class="btn-secondary">
+                  <input ngbButton type="radio" value="VALUATOR"> Valuator
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="required">Status</label>
+            <div>
+              <div class="btn-group btn-group-toggle" ngbRadioGroup name="status" [(ngModel)]="vendor.status" required>
+                <label ngbButtonLabel class="btn-secondary">
+                  <input ngbButton type="radio" [value]="true"> Active
+                </label>
+                <label ngbButtonLabel class="btn-secondary">
+                  <input ngbButton type="radio" [value]="false"> Inactive
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="required">Branches</label>
+            <ng-select [items]="branches" [multiple]="true" bindLabel="name" name="branches" [(ngModel)]="vendor.branch" required></ng-select>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
