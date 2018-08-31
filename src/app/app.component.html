@@ -30,6 +30,10 @@
           <div class="icon-nav icon-user-list"></div>
           <div class="nav-title">Valuation</div>
         </div>
+        <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'valuation-view'}" (click)="navigateTo('/valuation-view')">
+          <div class="icon-nav icon-user-list"></div>
+          <div class="nav-title">Valuation View</div>
+        </div>
       </div>
       <div class="right-container">
         <router-outlet></router-outlet>

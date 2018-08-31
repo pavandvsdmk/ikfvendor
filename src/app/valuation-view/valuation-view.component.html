@@ -1,0 +1,243 @@
+<div class="view-container valuation-container">
+  <div class="sub-title-wrap flx-row flx-jsb">
+    <div class="sub-title">Valuation</div>
+  </div>
+  <div class="valuation-view-container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">General</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Valuation request received from</th>
+                  <td>{{valuation.general.requestor}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Name of Loan Purchaser</th>
+                  <td>{{valuation.general.purchaser}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date of inspection</th>
+                  <td>{{valuation.general.inspectionDate}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Inspection Address</th>
+                  <td>{{valuation.general.inspectionAddress}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Serial no.of owner as per RC</th>
+                  <td>{{valuation.general.serialNo}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Vehicle's Particulars</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Name of registered owner</th>
+                  <td>{{valuation.vehicle.registerOwner}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Registration no</th>
+                  <td>{{valuation.vehicle.registrationNo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date of registration</th>
+                  <td>{{valuation.vehicle.registrationDate}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Chassis No</th>
+                  <td>{{valuation.vehicle.chassisNo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Engine No</th>
+                  <td>{{valuation.vehicle.engineNo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Model</th>
+                  <td>{{valuation.vehicle.model}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Make</th>
+                  <td>{{valuation.vehicle.make}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Manufacturing year</th>
+                  <td>{{valuation.vehicle.manufactureYear}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">G.V.W. (KGs)</th>
+                  <td>{{valuation.vehicle.gvk}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">H.P.N.</th>
+                  <td>{{valuation.vehicle.hpn}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Original RC verified</th>
+                  <td>{{valuation.vehicle.rcVerified}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Valuation</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Cost of new vehicle</th>
+                  <td>{{valuation.value.newVehicleCost}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Value of similar asset accessed in last 2M</th>
+                  <td>{{valuation.value.similarAssetValue}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Valuation Amount</th>
+                  <td>{{valuation.value.valuationAmount}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Remarks/Additional information on asset</th>
+                  <td>{{valuation.value.remarks}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Chassis print/copy attached</th>
+                  <td>{{valuation.value.chassisCopy}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Insurance Details</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Insured name</th>
+                  <td>{{valuation.insurance.insuredName}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Name of insurance co</th>
+                  <td>{{valuation.insurance.insuranceCo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Period of insurance from</th>
+                  <td>{{valuation.insurance.periodFrom}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Period of insurance to</th>
+                  <td>{{valuation.insurance.periodTo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">IDV</th>
+                  <td>{{valuation.insurance.idv}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Risk covered</th>
+                  <td>{{valuation.insurance.riskCovered}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Hypothecation with</th>
+                  <td>{{valuation.insurance.hypothecation}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Original policy verified</th>
+                  <td>{{valuation.insurance.policyVerified}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Permit/ Fitness Details</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Fitness valid upto</th>
+                  <td>{{valuation.permit.fitnessUpto}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Permit no</th>
+                  <td>{{valuation.permit.permitNo}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Permit valid upto</th>
+                  <td>{{valuation.permit.permitUpto}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Road tax paid upto</th>
+                  <td>{{valuation.permit.roadTaxUpto}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Condition of Vehicle</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Body shell</th>
+                  <td>{{valuation.condition.bodyShell}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Suspension</th>
+                  <td>{{valuation.condition.suspension}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Battery</th>
+                  <td>{{valuation.condition.battery}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Rear Tyres</th>
+                  <td>{{valuation.condition.rearTyre}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Front Tyres</th>
+                  <td>{{valuation.condition.frontTyre}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">electric/transmission/exhaust/ brake/steering system/Cooling</th>
+                  <td>{{valuation.condition.electric}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Remarks</th>
+                  <td>{{valuation.condition.remarks}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Trial drive comment on engine condition</th>
+                  <td>{{valuation.condition.trialComment}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Meter Reading</th>
+                  <td>{{valuation.condition.meterReading}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vehicle in running condition? (moved and tested)</th>
+                  <td>{{valuation.condition.runningCondition}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

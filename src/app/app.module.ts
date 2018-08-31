@@ -22,6 +22,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyDatePickerModule } from 'mydatepicker';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ValuationViewComponent } from './valuation-view/valuation-view.component';
 // import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
 const appRoutes: Routes = [
@@ -44,6 +45,12 @@ const appRoutes: Routes = [
     data: {
       name: 'valuation'
     }
+  }, {
+    path: 'valuation-view',
+    component: ValuationViewComponent,
+    data: {
+      name: 'valuation-view'
+    }
   }
 ];
 
@@ -53,7 +60,8 @@ const appRoutes: Routes = [
     VendorListComponent,
     AddVendorComponent,
     OnlyNumberDirective,
-    ValuationFormComponent
+    ValuationFormComponent,
+    ValuationViewComponent
   ],
   imports: [
     BrowserAnimationsModule,
