@@ -1,3 +1,11 @@
-<p>
-  vendor-list works!
-</p>
+<div class="view-container vendors-list-view-container">
+    <div class="sub-title-wrap">
+      <div class="sub-title">Vendors</div>
+    </div>
+    <div class="vendors-list-container">
+        <ng2-smart-table
+        [settings]="settings"
+        [source]="vendors">
+        </ng2-smart-table>
+    </div>
+  </div>

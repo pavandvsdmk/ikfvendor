@@ -17,3 +17,20 @@
 .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
     padding: 4px 5px;
 }
+
+table tr td, table tr th {
+    font-size: 14px  !important;
+    margin: 0;
+    padding: .5rem 1rem !important;
+    border: 1px solid #e9ebec;
+    font-weight: 400 !important;
+    vertical-align: middle !important;
+    a {
+        color: #000 !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
