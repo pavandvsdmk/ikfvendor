@@ -43,3 +43,31 @@ export class InsuranceModel {
     hypothecation: String;
     policyVerified: Boolean;
 }
+
+export class PermitModel {
+    fitnessUpto: any = getCurrentDate();
+    permitNo: String;
+    permitUpto: any = getCurrentDate();
+    roadTaxUpto: any = getCurrentDate();
+}
+
+export class ConditionModel {
+    bodyShell: String;
+    suspension: String;
+    battery: String;
+    rearTyre: String;
+    frontTyre: String;
+    electric: String;
+    remarks: String;
+    trialComment: String;
+    meterReading: String;
+    runningCondition: Boolean;
+}
+
+export class ValueModel {
+    newVehicleCost: String;
+    similarAssetValue: String;
+    valuationAmount: String;
+    remarks: String;
+    chassisCopy: Boolean;
+}
